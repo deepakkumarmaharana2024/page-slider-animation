@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button design</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .hero{
+            width: 80%;
+            height: 450px;
+            position: relative;
+            margin: 100px auto;
+            overflow: hidden;
+            background-color: chartreuse;
+        }
+
+        .btn-box{
+            display: flex;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .btn-box button{
+            background: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            margin-right: 50px;
+        }
+
+        .content{
+            margin: 5% auto;
+            padding: 43px;
+            position: absolute;
+            transform: translateX(100%);
+            transition: 0.3s;
+            
+        }
+
+        .content p{
+            padding: 34px;
+        }
+
+        #content1{
+            transform: translateX(0px);
+            background-color: rgb(133, 242, 242);
+        }
+
+        #content2{
+            background-color: rgb(49, 250, 183);
+        }
+        #content3{
+            background-color: rgb(173, 173, 235);
+        }
+
+        #btn1{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="btn-box">
+            <button id="btn1" onclick="openHTML()">HTML</button>
+            <button id="btn2" onclick="openCSS()">CSS </button>
+            <button id="btn3" onclick="openJAVASCRIPT()">JAVASCRIPT </button>
+        </div>
+        <div id="content1" class="content">
+            <h1> Learn HTML</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, id inventore quam nemo delectus itaque aliquam soluta quasi adipisci officiis minus saepe consequatur sit quaerat velit? Exercitationem eum non ab ut tenetur delectus quos odio assumenda enim beatae porro, ad ducimus sapiente ipsam. Fugit tenetur consequatur aliquam sunt quis earum nostrum veniam delectus, architecto, voluptate aut neque dicta sit nihil suscipit magnam ipsum iure asperiores? Cum, deleniti.
+            </p>
+        </div><div id="content2" class="content">
+            <h1> Learn CSS</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, id inventore quam nemo delectus itaque aliquam soluta quasi adipisci officiis minus saepe consequatur sit quaerat velit? Exercitationem eum non ab ut tenetur delectus quos odio assumenda enim beatae porro, ad ducimus sapiente ipsam. Fugit tenetur consequatur aliquam sunt quis earum nostrum veniam delectus, architecto, voluptate aut neque dicta sit nihil suscipit magnam ipsum iure asperiores? Cum, deleniti.
+            </p>
+        </div><div id="content3" class="content">
+            <h1> Learn JAVASCRIPT</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, id inventore quam nemo delectus itaque aliquam soluta quasi adipisci officiis minus saepe consequatur sit quaerat velit? Exercitationem eum non ab ut tenetur delectus quos odio assumenda enim beatae porro, ad ducimus sapiente ipsam. Fugit tenetur consequatur aliquam sunt quis earum nostrum veniam delectus, architecto, voluptate aut neque dicta sit nihil suscipit magnam ipsum iure asperiores? Cum, deleniti.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        var content1 = document.getElementById("content1");
+        var content2 = document.getElementById("content2");
+        var content3 = document.getElementById("content3");
+        var btn1 = document.getElementById("btn1");
+        var btn2 = document.getElementById("btn2");
+        var btn3 = document.getElementById("btn3");
+
+        function openHTML(){
+            content1.style.transform = "translateX(0)";
+            content2.style.transform = "translateX(100%)";
+            content3.style.transform = "translateX(100%)";
+            btn1.style.color = "#ff7846";
+            btn2.style.color = "#000";
+            btn3.style.color = "#000";
+            // content1.style.transitionDelay = "0s";
+            // content2.style.transitionDelay = "0s";
+            // content3.style.transitionDelay = "0s";
+        }
+        function openCSS(){
+            content1.style.transform = "translateX(-100%)";
+            content2.style.transform = "translateX(0)";
+            content3.style.transform = "translateX(100%)";
+            btn2.style.color = "#ff7846";
+            btn1.style.color = "#000";
+            btn3.style.color = "#000";
+            // content1.style.transitionDelay = "0s";
+            // content2.style.transitionDelay = "0s";
+            // content3.style.transitionDelay = "0s";
+        }
+        function openJAVASCRIPT(){
+            content1.style.transform = "translateX(-100%)";
+            content2.style.transform = "translateX(-100%)";
+            content3.style.transform = "translateX(0)";
+            btn3.style.color = "#ff7846";
+            btn2.style.color = "#000";
+            btn1.style.color = "#000";
+            // content1.style.transitionDelay = "0s";
+            // content2.style.transitionDelay = "0s";
+            // content3.style.transitionDelay = "0s";
+        }
+
+    </script>
+
+
+</body>
+</html>
